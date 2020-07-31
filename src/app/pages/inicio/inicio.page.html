@@ -1,0 +1,43 @@
+<ion-menu side="start" menuId="menu" contentId="miMenu">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Administrador</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+        <ion-list>
+            <ion-menu-toggle>
+                <ion-item (click)="logout()">
+                    <ion-icon slot="start" name="bandage-outline"></ion-icon>Cerrar Sesion</ion-item>
+                <ion-item>Menu Item</ion-item>
+                <ion-item>Menu Item</ion-item>
+                <ion-item>Menu Item</ion-item>
+            </ion-menu-toggle>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="miMenu"></ion-router-outlet>
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button menu="menu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>inicio</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-item *ngFor="let usuario of usuarios | async; trackBy: trackByFn">
+
+            <ion-label>{{usuario.nombres}}</ion-label>
+
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>

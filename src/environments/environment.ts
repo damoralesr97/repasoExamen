@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyApqg4kUjU1PHrgI__fkqbM8T90cKtxFAA',
+    authDomain: 'repasoexamen-deaac.firebaseapp.com',
+    databaseURL: 'https://repasoexamen-deaac.firebaseio.com',
+    projectId: 'repasoexamen-deaac',
+    storageBucket: 'repasoexamen-deaac.appspot.com',
+    messagingSenderId: '724123846592',
+    appId: '1:724123846592:web:3e183074afff260e996a25',
+    measurementId: 'G-DNVBMM6CGZ'
+  }
 };
 
 /*
